@@ -90,15 +90,12 @@ counters.forEach((counter) => {
 });
 const filterButtons = document.querySelectorAll("#portfolio-flters li");
 const items = document.querySelectorAll(".portfolio-item");
-
 filterButtons.forEach((btn) =>
   btn.addEventListener("click", () => {
     const filter = btn.dataset.id;
-
     // Update active class
     document.querySelector(".filter-active")?.classList.remove("filter-active");
     btn.classList.add("filter-active");
-
     items.forEach((item) => {
       const match = filter === "all" || item.id === filter;
       item.classList.toggle("show", match); // show match
