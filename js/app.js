@@ -101,8 +101,8 @@ filterButtons.forEach((btn) =>
 
     items.forEach((item) => {
       const match = filter === "all" || item.id === filter;
-      item.classList.toggle("show", match);
-      item.classList.toggle("hide", !match);
+      item.classList.toggle("show", match); // show match
+      item.classList.toggle("hide", !match); // hide not match
     });
   })
 );
